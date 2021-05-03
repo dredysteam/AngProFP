@@ -9,7 +9,6 @@ import { AuthModule } from 'src/auth/auth.module';
 // containers
 import { AppComponent } from './app.component';
 
-
 //components
 
 @NgModule({

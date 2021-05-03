@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "fitnessapp-77418"
+  },
+  "targets": {
+    "fitnessapp-77418": {
+      "hosting": {
+        "AngProFP": [
+          "fitnessapp-77418"
+        ]
+      }
+    }
   }
 }
