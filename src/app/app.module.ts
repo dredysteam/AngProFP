@@ -4,10 +4,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { Store } from '../../src/store';
 
 // feature modules
-
+import { AuthModule } from 'src/auth/auth.module';
 
 // containers
 import { AppComponent } from './app.component';
+
 
 //components
 
@@ -18,6 +19,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AuthModule
   ],
   providers: [Store],
   bootstrap: [AppComponent]
