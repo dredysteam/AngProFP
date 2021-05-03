@@ -5,6 +5,7 @@
     <label for="">
       <input type="email" placeholder="Email address" formControlName="email" />
     </label>
+
     <label for="">
       <input
         type="text"
@@ -12,6 +13,10 @@
         formControlName="password"
       />
     </label>
+
+    <div *ngIf="emailFormat" class="error">Invalid Email Format</div>
+
+    <div *ngIf="passwordInvalid" class="error">Password is Required</div>
 
     <ng-content select=".error"></ng-content>
     <div class="auth-form__action">
