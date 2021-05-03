@@ -41,6 +41,7 @@ export const firebaseConfig: FirebaseAppConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
+    // to avoid service duplication call forRoot
     SharedModule.forRoot()
   ]
   
