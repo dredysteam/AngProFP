@@ -43,4 +43,8 @@ export class AuthService {
   logoutUser() {
     this.af.signOut();
   }
+
+  get authState() {
+    return this.af.authState;
+  }
 }

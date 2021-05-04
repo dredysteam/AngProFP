@@ -8,6 +8,10 @@ import { AuthFormComponent } from './components/auth-form/auth-form.component';
 // services
 import { AuthService } from './services/auth.service';
 
+//guards
+import { AuthGuard } from './guards/auth.guard';
+
+
 @NgModule({
   declarations: [
     AuthFormComponent
@@ -18,7 +22,7 @@ import { AuthService } from './services/auth.service';
 
   ],
   exports: [AuthFormComponent],
-  providers:[AuthService]
+  // providers:[AuthService]
 })
 export class SharedModule {
   // to avoid auth service duplication
@@ -26,7 +30,8 @@ export class SharedModule {
     return {
       ngModule: SharedModule,
       providers: [
-        AuthService
+        AuthService,
+        AuthGuard
       ]
     }
   }

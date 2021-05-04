@@ -12,9 +12,14 @@ import { AppComponent } from './app.component';
 //components
 import { AppHeaderComponent } from './components/app-header/app-header.component';
 import { AppNavComponent } from './components/app-nav/app-nav.component';
+import { RouterModule, Routes } from '@angular/router';
 
-//components
 
+export const routes: Routes = [
+  {
+    path:'', pathMatch:'full', redirectTo:'schedule'
+  }
+]
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +29,7 @@ import { AppNavComponent } from './components/app-nav/app-nav.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RouterModule.forRoot(routes),
     AuthModule,
     HealthModule
   ],
