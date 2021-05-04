@@ -8,12 +8,17 @@ import { AuthModule } from 'src/auth/auth.module';
 
 // containers
 import { AppComponent } from './app.component';
+//components
+import { AppHeaderComponent } from './components/app-header/app-header.component';
+import { AppNavComponent } from './components/app-nav/app-nav.component';
 
 //components
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AppHeaderComponent,
+    AppNavComponent
   ],
   imports: [
     BrowserModule,
