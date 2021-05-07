@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class RegisterComponent implements OnInit {
 
   error: string;
-  constructor(private as: AuthService, private router:Router) { }
+  constructor(private authService: AuthService, private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -19,7 +19,7 @@ export class RegisterComponent implements OnInit {
   async registerUser(event: FormGroup) {
     const { email, password } = event.value;
     try {
-      await this.as.createUser(email, password);
+      await this.authService.createUser(email, password);
       this.router.navigate(['/']);
     } catch(err) {
       this.error = err.message;

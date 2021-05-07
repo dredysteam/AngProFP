@@ -4,6 +4,9 @@ import { RouterModule, Routes } from '@angular/router'
 import { AuthGuard } from '../auth/shared/guards/auth.guard';
 
 
+// shared modules
+import {SharedModule } from './shared/shared.module';
+
 export const routes: Routes = [
   {
     path: 'meals', canActivate:[AuthGuard], loadChildren: () => import('./meals/meals.module').then(m => m.MealsModule)
@@ -20,7 +23,8 @@ export const routes: Routes = [
   declarations: [],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    SharedModule.forRoot()
   ]
 })
 export class HealthModule { }

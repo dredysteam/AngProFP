@@ -1,6 +1,4 @@
 <div>
-  <!-- Hello Ultimate Angular -->
-  <!-- <h4>{{ user$ | async | json }}</h4> -->
   <app-app-header [user]="user$ | async" (logout)="onLogout()">
   </app-app-header>
   <app-app-nav *ngIf="(user$ | async)?.authenticated"></app-app-nav>

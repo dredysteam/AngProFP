@@ -32,19 +32,25 @@ export class AuthService {
     )
   }
 
+  // Register Container Use
   createUser(email: string, password: string) {
     return this.af.createUserWithEmailAndPassword(email, password);
   }
-
+  // Login Container Use
   loginUser(email: string, password: string) {
     return this.af.signInWithEmailAndPassword(email, password);
   }
-
+  // App Container Use
   logoutUser() {
     this.af.signOut();
   }
 
+  // Use for Guard to verify authentication (AuthState)
   get authState() {
     return this.af.authState;
+  }
+  // Get Current User 
+  get user() {
+    return this.af.currentUser;
   }
 }
