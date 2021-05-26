@@ -18,7 +18,6 @@ export class AppComponent implements OnInit,OnDestroy {
 
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
     this.subscription = this.as.auth$.subscribe();
     this.user$ = this.store.select<User>('user');
     
@@ -26,7 +25,6 @@ export class AppComponent implements OnInit,OnDestroy {
 
   ngOnDestroy(): void {
     //Called once, before the instance is destroyed.
-    //Add 'implements OnDestroy' to the class.
     this.subscription.unsubscribe();
     
   }

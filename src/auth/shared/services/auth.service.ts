@@ -45,7 +45,7 @@ export class AuthService {
     this.af.signOut();
   }
 
-  // Use for Guard to verify authentication (AuthState)
+  // Use in Guard to verify authentication (AuthState)
   get authState() {
     return this.af.authState;
   }
@@ -53,4 +53,5 @@ export class AuthService {
   get user() {
     return this.af.currentUser;
   }
+
 }

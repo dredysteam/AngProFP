@@ -14,10 +14,11 @@ export class MealsComponent implements OnInit,OnDestroy {
   subscription: Subscription;
 
   constructor(private mealsService: MealsService, private store: Store) {
-    this.meals$ = this.store.select<Meal[]>('meals');
+    
    }
 
   ngOnInit(): void {
+    this.meals$ = this.store.select<Meal[]>('meals');
     this.subscription = this.mealsService.meals$.subscribe();
   }
   

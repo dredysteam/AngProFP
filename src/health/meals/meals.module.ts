@@ -7,8 +7,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MealsComponent } from './containers/meals/meals.component';
 import { MealComponent } from './containers/meal/meal.component';
 
+
+// components
+import { MealFormComponent } from './components/meal-form/meal-form.component';
+
 // shared modules
 import { SharedModule} from '../shared/shared.module';
+
 
 export const routes: Routes = [
   {
@@ -22,7 +27,8 @@ export const routes: Routes = [
 @NgModule({
   declarations: [
     MealsComponent,
-    MealComponent
+    MealComponent,
+    MealFormComponent
   ],
   imports: [
     CommonModule,
