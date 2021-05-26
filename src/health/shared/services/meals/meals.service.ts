@@ -43,6 +43,10 @@ export class MealsService {
     return this.db.list(`meals/wAoJW5SWZ5XHoHsRRKoVbfC4Bbq1`).push(meal);
   }
 
+  removeMeal(key: string) {
+    return this.db.list(`meals/wAoJW5SWZ5XHoHsRRKoVbfC4Bbq1`).remove(key);
+  }
+
   // ???
   // get uid() {
   //   return this.authService.user.then((user) => {
